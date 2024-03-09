@@ -1,8 +1,6 @@
 
 
-# React + Vite
-
-# React Beer App
+# React + Vite Beer App
 
 ![Beer App Screenshot](/path/to/screenshot.png)
 
