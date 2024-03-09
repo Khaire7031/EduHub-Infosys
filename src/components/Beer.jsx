@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import beerData from '../Data/Beer';
 
 // import * as React from 'react';
+import { Link } from '@mui/icons-material';
+import { Box, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -17,9 +19,9 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
 
-const NewCard = styled('Card')`
-    height:500px !important
-`
+
+
+
 export default function Beer() {
     const [expanded, setExpanded] = React.useState(false);
 
@@ -48,7 +50,7 @@ export default function Beer() {
 
     return (
         <div className='main-Box mt-2'>
-            <div className='mb-3 from-box'>
+            <div className='mb-3'>
                 <form className="d-flex">
                     <input
                         className="form-control me-2"
@@ -64,45 +66,22 @@ export default function Beer() {
                 </form>
             </div>
 
-            <div className='card-data'>
+            <div className='card-data container'>
                 {filteredData.map(beer => (
-                    <div className='mb-5 card-demo'>
-                        <Card classname='' sx={{ maxWidth: 345 }}>
-
-                            <CardHeader
-                                avatar={
-                                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                        {beer.name[0]}
-                                    </Avatar>
-                                }
-                                action={
-                                    <IconButton aria-label="settings">
-                                        <MoreVertIcon />
-                                    </IconButton>
-                                }
-                                title={beer.name}
-                                subheader={beer.tagline}
-                            />
-                            <CardMedia
-                                component="img"
-                                height="194"
-                                image={beer.image_url}
-                                alt={beer.name}
-                            />
-                            <CardContent>
-                                <Typography variant="body2" color="text.secondary">
-                                    {beer.description}
-                                </Typography>
-                            </CardContent>
-                            <CardActions disableSpacing>
-
-                                <IconButton aria-label="share">
-                                    <ShareIcon />
-                                </IconButton>
-
-                            </CardActions>
-
-                        </Card>
+                    <div className='card-body mb-5 card-demo'>
+                        <div class="card shadow-sm card-content">
+                            <img className='mt-2 Beer-Img' src={beer.image_url} alt={beer.name} />
+                            <div class="card-body">
+                                <h3>{beer.name}</h3>
+                                <p class="card-text">{beer.description}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn">View More</button>
+                                    </div>
+                                    <small class="text-body-secondary">{beer.first_brewed}</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 ))}
 
