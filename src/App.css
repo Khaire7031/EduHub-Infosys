@@ -1,0 +1,8 @@
+.main-beer-data {
+    /* display: flex; */
+}
+
+.card-data {
+    display: flex;
+    flex-wrap: wrap;
+}
