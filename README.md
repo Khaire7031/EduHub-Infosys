@@ -5,6 +5,10 @@
 
 ![Beer App Screenshot](/path/to/screenshot.png)
 
+## Live Site
+
+The live site is deployed at [https://beer-website-three.vercel.app/](https://beer-website-three.vercel.app/).
+
 ## Description
 
 The React Beer App is a web application built using React.js that displays a collection of beers retrieved from an API. It provides users with information about each beer, including its name, tagline, description, and image.
@@ -37,6 +41,8 @@ The React Beer App is a web application built using React.js that displays a col
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or bug fixes, feel free to open an issue or submit a pull request.
+
+## Description
 
 ## License
 
